@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class assignment2 {
 
 	public static void main(String[] args) {
-		WordCountFileReader filename = new WordCountFileReader();
+		WordCountFileReader filename = new WordCountFileReader();//FileReader reads the file
 		
 		HashMap<String, Integer> hashmap = new HashMap<String, Integer>();
 		
@@ -25,9 +25,9 @@ public class assignment2 {
 				}
 			}
 			for (String i : hashmap.keySet()) {
-				System.out.println(i + ": " + hashmap.get(i));
+				System.out.println(i + ": " + hashmap.get(i)); //printing each hashmap key
 			}
-		} catch (FileNotFoundException e) {
+		} catch (FileNotFoundException e) {//error catching
 			System.out.println("File not found in directory");
 		}
 	}
